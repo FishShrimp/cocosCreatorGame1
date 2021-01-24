@@ -35,8 +35,10 @@ cc.Class({
         let x = cc.winSize.width/2 -this.enemyNode.width/2;
         let y = Math.random()*cc.winSize.height/4;
         let dua = 0.6 + Math.random() * 0.5;
+
         this.enemyNode.active = true;
         this.enemyNode.x = 0;
+
         this.enemyNode.y = cc.winSize.height/3-this.enemyNode.height/2;
 
         let seq =  cc.repeatForever(
@@ -113,7 +115,9 @@ cc.Class({
         setTimeout(()=>{
             //场景重新加载
             console.log('场景重新加载');
+
             cc.director.loadScene('game');
+            
         },1000);
         
     },
